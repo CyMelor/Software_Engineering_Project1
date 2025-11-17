@@ -15,5 +15,11 @@ int main()
     } catch (const std::exception& e) {
         cout<<"Error: "<<e.what()<<endl;
     }
+    cout<<"10 % 3 = "<<calc.modulo(10, 3)<<endl;
+    try {
+        cout<<"3 % 0 = "<<calc.modulo(3, 0)<<endl;
+    } catch (const std::exception& e) {
+        cout<<"Error: "<<e.what()<<endl;
+    }
     return 0;
 }

@@ -9,6 +9,7 @@ public:
     int multiply(int a, int b);
     double divide(int a, int b);
     int power(int a, int b);
+    int modulo(int a, int b);
 };
 
 #endif

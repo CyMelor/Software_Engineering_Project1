@@ -28,3 +28,10 @@ int Calculator::power(int a, int b) {
     }
     return result;
 }
+
+int Calculator::modulo(int a, int b) {
+    if (b == 0) {
+        throw std::runtime_error("Modulo by zero!");
+    }
+    return a % b;
+}
