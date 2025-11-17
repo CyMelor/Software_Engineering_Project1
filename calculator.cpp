@@ -1,5 +1,6 @@
 // calculator.cpp
 #include "calculator.h"
+#include <stdexcept>
 
 int Calculator::add(int a, int b) {
     return a + b;
@@ -14,10 +15,10 @@ int Calculator::multiply(int a, int b) {
 }
 
 double Calculator::divide(int a, int b) {
-    if (b != 0) {
-        return static_cast<double>(a) / b;
+    if (b == 0) {
+        throw std::runtime_error("Division by zero!");
     }
-    return 0.0;
+    return static_cast<double>(a) / b;
 }
 
 int Calculator::power(int a, int b) {

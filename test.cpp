@@ -10,5 +10,10 @@ int main()
     cout<<"2 * 7 = "<<calc.multiply(2, 7)<<endl;
     cout<<"9 / 6 = "<<calc.divide(9, 6)<<endl;
     cout<<"4 ^ 3 = "<<calc.power(4, 3)<<endl;
+    try {
+        cout<<"2 / 0 = "<<calc.divide(2, 0)<<endl;
+    } catch (const std::exception& e) {
+        cout<<"Error: "<<e.what()<<endl;
+    }
     return 0;
 }
